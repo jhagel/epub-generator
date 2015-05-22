@@ -16,28 +16,34 @@ app.get('/scrape', function(req, res){
 			var json = { title : "", release : "", rating : ""};
 
 			$('.header').filter(function(){
-		        var data = $(this);
-		        title = data.children().first().text();
-		        release = data.children().last().children().text();
+        var data = $(this);
+        title = data.children().first().text();
+        release = data.children().last().children().text();
 
-		        json.title = title;
-		        json.release = release;
-	        })
+        json.title = title;
+        json.release = release;
+      })
 
-	        $('.star-box-giga-star').filter(function(){
-	        	var data = $(this);
-	        	rating = data.text();
+      $('.star-box-giga-star').filter(function(){
+      	var data = $(this);
+      	rating = data.text();
 
-	        	json.rating = rating;
-	        })
+      	json.rating = rating;
+      })
 		}
 
 		fs.writeFile('bin/output.json', JSON.stringify(json, null, 4), function(err){
-        	console.log('File successfully written! - Check your project directory for the output.json file');
-        })
+    	console.log('File successfully written! - Check your project directory for the output.json file');
+    })
 
         res.send('Check your console!')
 	})
+})
+
+app.get('/', function(req, res){
+
+		res.send('hello world')
+
 })
 
 app.listen('8081')
