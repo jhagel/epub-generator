@@ -5,9 +5,13 @@
   "main": "server.js",
   "author": "Scotch",
   "dependencies": {
+    "body-parser": "^1.12.4",
     "cheerio": "latest",
     "epub-gen": "0.0.9",
     "express": "latest",
+    "jade": "^1.9.2",
+    "node-sass": "^3.1.2",
+    "node-sass-middleware": "^0.7.0",
     "request": "latest"
   }
 }

@@ -1,0 +1,11 @@
+html
+  head
+    title!= title
+  body
+    h1!= message
+    form(action="/scrape",method="GET")
+      label(for="url")
+        | URL
+      input(name="url")
+      button(type="submit")
+        | Submit
