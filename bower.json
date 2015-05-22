@@ -1,0 +1,22 @@
+{
+  "name": "epub-generator",
+  "version": "0.0.0",
+  "authors": [
+    "Josh Hagel <joshhagel@gmail.com>"
+  ],
+  "description": "Generate e-pub from URL",
+  "keywords": [
+    "epub",
+    "scrape",
+    "generator"
+  ],
+  "license": "MIT",
+  "homepage": "joshhagel@gmail.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
